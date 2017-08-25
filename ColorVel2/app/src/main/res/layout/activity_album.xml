@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_album"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="org.androidtown.colorvel2.AlbumActivity">
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <!-- 서울특별시 textview-->
+        <TextView
+            android:id="@+id/districtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="서울특별시"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_margin="20dp"/>
+
+        <!-- 더보기(플러스) 버튼 -->
+        <ImageButton
+            android:id="@+id/openGalleryButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_add_black_24dp"
+            android:layout_alignBottom="@+id/districtName"
+            android:layout_toEndOf="@+id/districtName"
+            android:layout_marginStart="200dp"
+            android:background="@null"
+            android:onClick="onClick"/>
+
+    </RelativeLayout>
+
+    <!-- 그리드뷰 : 이미지를 띄우기 위한 리스트-->
+    <GridView
+        android:id="@+id/album_gridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="3"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:paddingBottom="20dp"/>
+
+</LinearLayout>

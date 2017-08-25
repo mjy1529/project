@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.colorvel2.ColoringActivity">
+
+    <!-- 색칠할 이미지를 넣을 레이아웃 -->
+    <LinearLayout
+        android:id="@+id/coloringImageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:orientation="vertical">
+
+        <!-- 색칠할 이미지가 나타날 이미지뷰-->
+        <ImageView
+            android:id="@+id/simple_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/image_03"/>
+
+    </LinearLayout>
+
+    <!-- 도구 레이아웃, 아이디는 toolLayout -->
+    <LinearLayout
+        android:id="@+id/toolLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:background="#cfcfcf"
+        android:layout_above="@+id/paletteLayout"
+        android:layout_alignParentStart="true">
+
+        <!-- 저장 버튼 -->
+        <ImageButton
+            android:id="@+id/saveButton"
+            android:onClick="onClick"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_get_app_black_24dp"/>
+
+        <!-- 지우개 버튼 -->
+        <ImageButton
+            android:id="@+id/eraseButton"
+            android:onClick="onClick"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_crop_7_5_black_24dp"/>
+
+        <!-- 이전 버튼 -->
+        <ImageButton
+            android:id="@+id/backButton"
+            android:onClick="onClick"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_replay_black_24dp"/>
+
+        <!-- 브러시 버튼 -->
+        <ImageButton
+            android:id="@+id/brushButton"
+            android:onClick="onClick"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_brush_black_24dp" />
+
+        <!-- 확대 버튼 -->
+        <ImageButton
+            android:id="@+id/touchButton"
+            android:onClick="onClick"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_touch_app_black_24dp"/>
+
+    </LinearLayout>
+
+    <!-- 팔레트 레이아웃 -->
+    <LinearLayout
+        android:id="@+id/paletteLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:background="#ffe6e6"
+        android:gravity="right"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <!-- MORE 버튼 : 이 버튼을 눌러야 toolLayout이 나옴 -->
+        <Button
+            android:id="@+id/moreButton"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:text="more"
+            android:background="#ffc3c3"
+            android:onClick="onClick"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
